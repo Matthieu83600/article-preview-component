@@ -1,0 +1,116 @@
+:root {
+  --lightGrayishBlue: hsl(210, 46%, 95%);
+  --grayishBlue: hsl(212, 23%, 69%);
+  --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+  --desaturedDarkBlue: hsl(214, 17%, 51%);
+  --white: hsl(0, 0%, 100%);
+  --font-family: "Manrope", sans-serif;
+  --font-size: 13px;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+body {
+  background-color: var(--lightGrayishBlue);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size);
+}
+main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+/* H1 */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  position: absolute;
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.card {
+  display: flex;
+  gap: 40px;
+  background-color: var(--white);
+  border-radius: 10px;
+  filter: drop-shadow(0px 40px 40px rgba(201, 213, 225, 0.5));
+  max-width: 730px;
+  overflow: hidden;
+}
+.card__image {
+  width: 20rem;
+  overflow: hidden;
+}
+.card__image img {
+  min-width: 122%;
+  height: 100%;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-block: 30px;
+  padding-inline-end: 40px;
+  width: 30rem;
+}
+.card__content-title {
+  color: var(--veryDarkGrayishBlue);
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+  line-height: 130%;
+  letter-spacing: 0.25%;
+}
+.card__content-description {
+  color: var(--grayishBlue);
+  line-height: 140%;
+  letter-spacing: 0.12%;
+}
+.card__content-infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+}
+.card__content-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.card__content-profile img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.card__content-profile div {
+  display: flex;
+  flex-direction: column;
+}
+.card__content-author {
+  color: var(--veryDarkGrayishBlue);
+  font-weight: var(--font-weight-bold);
+  line-height: 140%;
+  letter-spacing: 0.12%;
+}
+.card__content-date {
+  color: var(--grayishBlue);
+  line-height: 140%;
+  letter-spacing: 0.12%;
+}
+.card__content-share {
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: var(--lightGrayishBlue);
+}
+.modal {
+  display: none;
+}
+.attribution {
+  font-size: 12px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
